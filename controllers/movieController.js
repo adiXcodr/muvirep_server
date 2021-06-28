@@ -25,7 +25,9 @@ const getMoviesPaged = async (req, res, next) => {
         } = req.query;
         let movies = await MovieSchema.find();
         if (movies) {
-            movies = paginate(movies, pageNumber, perPage);
+            if (pageNumber && perPage) {
+                movies = paginate(movies, pageNumber, perPage);
+            }
             res.status(200).json({ "status": "success", "data": movies });
         }
         else {
