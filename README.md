@@ -4,6 +4,9 @@
 <h3 align="center">MuviRep - An open-source movie repository</h3>
 <br>
 
+## Deployment
+[Live on Heroku](https://muvirep.herokuapp.com)
+
 ## Technologies used
 * NodeJS
 * ExpressJS
