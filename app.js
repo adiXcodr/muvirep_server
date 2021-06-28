@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const { db_url, db_name } = require("./constants");
 
 const indexRouter = require('./routes/index');
-const videoRouter = require('./routes/videos');
+const movieRouter = require('./routes/movies');
 
 const app = express();
 
@@ -35,7 +35,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/movie', movieRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
