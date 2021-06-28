@@ -4,6 +4,7 @@ const { paginate } = require("../utils/globalHandlers");
 const getAllMovies = async (req, res, next) => {
     try {
         let movies = await MovieSchema.find();
+        console.log("Movies found?", movies);
         if (movies) {
             res.status(200).json({ "status": "success", "data": movies });
         }
